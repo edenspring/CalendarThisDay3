@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-from flask import (Blueprint, render_template)
+from flask import (Blueprint, render_template, redirect, url_for)
 from app.forms import AppointmentForm
 import sqlite3
 import os
@@ -12,6 +12,11 @@ def round_time(time):
 
 @bp.route('/', methods=("GET","POST"))
 def main():
+    d = datetime.now()
+    return redirect(url_for(".daily", year=d.year, month=d.month, day=d.day))
+
+@bp.route("/<int:year>/<int:month>/<int:day>", methods=["GET", "POST"])
+def daily(year, month, day):
     form = AppointmentForm()
     if form.validate_on_submit():
         with sqlite3.connect(DB_FILE) as conn:
@@ -49,11 +54,14 @@ def main():
             curs.execute(sql, params)    
     with sqlite3.connect(DB_FILE) as conn:
         curs = conn.cursor()
+        day = datetime(year, month, day)
+        next_day = day + timedelta(days=1)
         curs.execute("""
-                        SELECT id, name, start_datetime, end_datetime
-                        FROM appointments
-                        ORDER BY start_datetime;
-                        """)
+                    SELECT id, name, start_datetime, end_datetime
+                    FROM appointments
+                    WHERE start_datetime BETWEEN :day AND :next_day
+                    ORDER BY start_datetime
+                    """, {'day': day, 'next_day': next_day})
         data = curs.fetchall()
         rows = []
         for row in data:
