@@ -16,12 +16,12 @@ together. The project references some articles
 ### Articles/Readings mentioned in README
 Some links that will be helpful when completing this on your own
 
-[Routing Blueprints In Flask](https://open.appacademy.io/learn/js-py---pt-feb-2022-online/week-35---flask-and-sqlite3/routing-blueprints-in-flask)
+[Routing Blueprints In Flask](https://open.appacademy.io/learn/js-py---pt-apr-2022-online/week-35---flask-and-sqlite3/routing-blueprints-in-flask)
 
-[Jinja Templates](https://open.appacademy.io/learn/js-py---pt-feb-2022-online/week-35---flask-and-sqlite3/jinja-templates)
+[Jinja Templates](https://open.appacademy.io/learn/js-py---pt-apr-2022-online/week-35---flask-and-sqlite3/jinja-templates)
 
-[Using SQLite3](https://open.appacademy.io/learn/js-py---pt-feb-2022-online/week-35---flask-and-sqlite3/using-sqlite3)
+[Using SQLite3](https://open.appacademy.io/learn/js-py---pt-apr-2022-online/week-35---flask-and-sqlite3/using-sqlite3)
 
-[Handling POSTs](https://open.appacademy.io/learn/js-py---pt-feb-2022-online/week-35---flask-and-sqlite3/handling-posts)
+[Handling POSTs](https://open.appacademy.io/learn/js-py---pt-apr-2022-online/week-35---flask-and-sqlite3/handling-posts)
 
-[Serving HTML From Flask](https://open.appacademy.io/learn/js-py---pt-feb-2022-online/week-35---flask-and-sqlite3/serving-html-from-flask)
+[Serving HTML From Flask](https://open.appacademy.io/learn/js-py---pt-apr-2022-online/week-35---flask-and-sqlite3/serving-html-from-flask)
